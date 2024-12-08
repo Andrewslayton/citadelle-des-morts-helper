@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 const ravenData = [
@@ -10,20 +12,18 @@ const ravenData = [
 
 export default function Raven() {
   return (
-    <div className="p-4">
-      <div className="grid grid-cols-5 gap-4 mb-4 text-center font-bold text-lg">
+    <div className="p-6 border border-gray-300 rounded shadow-lg">
+      <h2 className="text-xl font-bold text-center mb-4">Raven Combinations</h2>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         {ravenData.map((item, index) => (
-          <div key={index}>{item.label}</div>
-        ))}
-      </div>
-      <div className="grid grid-cols-5 gap-4">
-        {ravenData.map((item, index) => (
-          <img
-            key={index}
-            src={item.image}
-            alt={`${item.label} image`}
-            className="w-20 h-20 border border-gray-400 rounded"
-          />
+          <div key={index} className="flex flex-col items-center text-center">
+            <p className="mb-2 font-bold">{item.label}</p>
+            <img
+              src={item.image}
+              alt={`${item.label} image`}
+              className="w-20 h-20 border border-gray-400 rounded"
+            />
+          </div>
         ))}
       </div>
     </div>

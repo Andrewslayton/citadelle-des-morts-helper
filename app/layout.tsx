@@ -29,6 +29,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <div className="p-8 text-center">
+          Click symbols to select them, store them for reference, and use them to solve puzzles.
+        </div>
       </body>
     </html>
   );

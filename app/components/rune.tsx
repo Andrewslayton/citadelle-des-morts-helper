@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useState } from "react";
 
 export default function Rune() {
@@ -19,7 +20,8 @@ export default function Rune() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-6 border border-gray-300 rounded shadow-lg">
+      <h2 className="text-xl font-bold text-center mb-4">Rune Step</h2>
       <div className="flex flex-wrap gap-2 mb-4">
         {selectedRunes.map((img, index) => (
           <img
@@ -31,7 +33,7 @@ export default function Rune() {
         ))}
       </div>
       <button
-        className="px-4 py-2 mb-4 text-white bg-red-500 rounded hover:bg-red-600"
+        className="px-4 py-2 mb-4 text-white bg-red-500 rounded hover:bg-red-600 "
         onClick={clearRunes}
       >
         Clear
